@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create html by using js</title>
+<style>
+		section{
+			display: flex;
+			flex-wrap: wrap;
+		}
+		section figure{
+			flex: 1;
+			margin: 0 10px;
+			border: 1px solid #ccc;
+			border-radius: 10px;
+			padding: 10px;
+		}
+	</style>
+</head>
+<body>
+	<button>click me</button>
+    <script>
+    let products = [
+		{
+			imageUrl:'https://www.achieversit.com/assets/images/AIT-white.jpg',
+			title: 'UI Development',
+			description: 'Userinterface develoment program',
+			actual_price: 25000,
+			discounted_price: 20000,
+		},
+		{
+			imageUrl:'https://www.achieversit.com/assets/images/AIT-white.jpg',
+			title: 'UI Development',
+			description: 'Userinterface develoment program',
+			actual_price: 25000,
+			discounted_price: 20000
+		},
+		{
+			imageUrl:'https://www.achieversit.com/assets/images/AIT-white.jpg',
+			title: 'UI Development',
+			description: 'Userinterface develoment program',
+			actual_price: 25000,
+			discounted_price: 20000
+		},
+		{
+			imageUrl:'https://www.achieversit.com/assets/images/AIT-white.jpg',
+			title: 'UI Development',
+			description: 'Userinterface develoment program',
+			actual_price: 25000,
+			discounted_price: 20000
+		},
+		{
+			imageUrl:'https://www.achieversit.com/assets/images/AIT-white.jpg',
+			title: 'UI Development',
+			description: 'Userinterface develoment program',
+			actual_price: 25000,
+			discounted_price: 20000
+		},
+		{
+			imageUrl:'https://www.achieversit.com/assets/images/AIT-white.jpg',
+			title: 'UI Development',
+			description: 'Userinterface develoment program',
+			actual_price: 25000,
+			discounted_price: 20000
+		},
+		{
+			imageUrl:'https://www.achieversit.com/assets/images/AIT-white.jpg',
+			title: 'UI Development',
+			description: 'Userinterface develoment program',
+			actual_price: 25000,
+			discounted_price: 20000
+		},
+		{
+			imageUrl:'https://www.achieversit.com/assets/images/AIT-white.jpg',
+			title: 'UI Development',
+			description: 'Userinterface develoment program',
+			actual_price: 25000,
+			discounted_price: 20000
+		}
+	];
+	var dynamicCards='<section>';
+		for(var i=0; i<products.length; i++){
+			dynamicCards += '<figure>';
+			dynamicCards +='<img src='+products[i].imageUrl+' alt='+products[i].title+'/>';
+			dynamicCards +='<figcaption>'+products[i].title+'</figcaption>';
+			dynamicCards += '<figcaption>'+products[i].discription+'</figcaption/>'
+			dynamicCards += '<figcaption>'+products[i].actual_price+'</figcaption>'
+			dynamicCards += '<figcaption>'+products[i].discounted_price+'</figcaption>'
+			dynamicCards +='</figure>';
+		}
+	dynamicCards +='</section>'
+	document.write(dynamicCards);
+
+    </script>
+</body>
+</html>

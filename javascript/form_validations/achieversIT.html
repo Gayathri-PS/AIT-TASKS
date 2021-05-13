@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <title>achievers</title>
+<style>
+		section{
+			display: flex;
+			flex-wrap: wrap;
+		}
+		section figure{
+			flex: 1;
+			margin: 30px 20px;
+			border: 1px solid #ccc;
+            
+            
+			
+		}
+        .background{
+            padding:20px 30px;
+            display:flex;
+            color:white;
+            font-size:25px;
+
+        }
+        .content{
+            padding:10px;
+        }
+        img{
+            height:50px;
+            width:50px;
+            margin:15px;
+        }
+       
+</style>
+
+</head>
+<body>
+   <script>
+    let products = [
+		{
+			imageUrl:'https://ih1.redbubble.net/image.453958487.1770/pp,840x830-pad,1000x1000,f8f8f8.u3.jpg',
+			title: 'ANGULAR DEVELOPMENT COURSE',
+			description: ' applications detailed explanations of JSX and its information official and reliance infusion includes altogether lessen the measure of code that should be composed. ',
+			review: 'REVIEW',
+			icons:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWzP0b3rcT8tJuL7bwgLkbgYPQzYqMP5Gdyg&usqp=CAU',
+            bgc :'red',
+            rating:'5.0(132)'
+		},
+		{
+			imageUrl:'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png',
+			title: 'REACT DEVELOPMENT COURSE',
+			description: 'We teach you detailed explanations of JSX etc. Our instructor-led training to understand and build React components and structure applications with Redux.',
+			review: 'REVIEW',
+			icons:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWzP0b3rcT8tJuL7bwgLkbgYPQzYqMP5Gdyg&usqp=CAU',
+            bgc:'blue',
+            rating:'5.0(162)'
+		},
+		{
+			imageUrl:'https://img.stackshare.io/service/1167/mean.png',
+			title: 'MEAN STACK DEVELOPMENT COURSE',
+			description: '" an in depth full stack social network  and MongoDB along with ES6+. We will start with a blank text editor and end with a deployed full stack application.',
+			review: 'REVIEW',
+			icons:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWzP0b3rcT8tJuL7bwgLkbgYPQzYqMP5Gdyg&usqp=CAU',
+            bgc:'green',
+            rating:'5.0(167)'
+		},
+		{
+			imageUrl:'https://raw.githubusercontent.com/IamMohaiminul/MERNjs/master/public/images/logo.png',
+			title: 'MERN STACK DEVELOPMENT COURSE',
+			description: 'We are one of the top web stack social network training institutes in Bangalore offering advanced web development courses to our students.',
+			review: 'REVIEW',
+			icons:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWzP0b3rcT8tJuL7bwgLkbgYPQzYqMP5Gdyg&usqp=CAU',
+            bgc:'yellow',
+            rating:'5.0(167)'
+		},
+        {
+			imageUrl:'https://img.favpng.com/2/8/13/web-development-web-design-logo-png-favpng-bijw25DmUBVkgvFe23VqT5fLp.jpg',
+			title: 'WEB DEVELOPMENT COURSE',
+			description: 'We are one of the top web training stack social network institutes in Bangalore offering advanced web development courses to our students.',
+			review: 'REVIEW',
+			icons:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWzP0b3rcT8tJuL7bwgLkbgYPQzYqMP5Gdyg&usqp=CAU',
+            bgc:'orange',
+            rating:'5.0(138)'
+		},
+        {
+			imageUrl:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyBbkB40wgyF_i4D_inAY7AC1qMvPFatrmYA&usqp=CAU',
+			title: 'DIGITAL MARKETING COURSE',
+			description: 'The future for digital stack social network marketing is promising, and its scope in the upcoming future is that it may replace all other standard forms of marketing soon',
+			review: 'REVIEW',
+			icons:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWzP0b3rcT8tJuL7bwgLkbgYPQzYqMP5Gdyg&usqp=CAU',
+            bgc:'pink',
+            rating:'5.0(138)'
+		},
+        {
+			imageUrl:'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png',
+			title: 'REACT NATIVE DEVELOPMENT COURSE',
+			description: ' will master tips and best practices that you can immediately implement to build high quality apps. Our course covers a wide variety of topics from increasing app',
+			review: 'REVIEW',
+			icons:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWzP0b3rcT8tJuL7bwgLkbgYPQzYqMP5Gdyg&usqp=CAU',
+            bgc:'violet',
+            rating:'5.0(182)'
+		},
+        {
+			imageUrl:'https://hackr.io/tutorials/ionic/logo-ionic.svg?ver=1587978084',
+			title: 'IONIC DEVELOPMENT COURSE',
+			description: 'will master tips and best practices that you can immediately implement to build high quality apps. Our course covers a wide variety of topics from increasing app',
+			review: 'REVIEW',
+			icons:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWzP0b3rcT8tJuL7bwgLkbgYPQzYqMP5Gdyg&usqp=CAU',
+            bgc:'orangered',
+            rating:'5.0(178)'
+		},
+		
+	];
+    var dynamicCards = `<section>`;
+        for(var i=0; i<products.length; i++){
+            dynamicCards += `<figure>
+                <figcaption style="background:${products[i].bgc}" class='background'>
+                <img src="${products[i].imageUrl}" alt="${products[i].title}">
+                <figcaption>${products[i].title}</figcaption>
+                </figcaption>
+                <figcaption class='content'>${products[i].description}</figcaption>
+                <hr>
+                <figcaption class='content'>${products[i].review}</figcaption>
+                <figcaption style="display:flex; align-items:center">
+                <img src="${products[i].icons}" alt="${products[i].review}" style="width:120px">
+                <figcaption>${products[i].rating}</figcaption>
+                </figcaption>
+                
+                </figure>`
+        }
+    dynamicCards+=`</section>`;
+    document.write(dynamicCards);
+
+    
+    
+
+    </script> 
+</body>
+</html>

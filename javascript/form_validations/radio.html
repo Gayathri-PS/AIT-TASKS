@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>radiobutton</title>
+</head>
+<body>
+    <form name="ny form" action="onchange.html">
+        <input type='radio' name='gender' id='male' value='male'>male
+        <input type='radio' name='gender' id='fe-male' value='fe-male'>fe-male<br>
+        <button type='button' onclick='checkbutton()'>submit</button>
+    <h3 id="correct" style= "color:green"> </h3>
+    <h4 id="error" style= "color:red"> </h4>
+    </form>
+    <script>
+        function checkbutton(){
+            if(document.getElementById('male').checked){
+                document.getElementById('correct').innerHTML='gender is male';
+            }
+            else if(document.getElementById('fe-male').checked){
+                document.getElementById('correct').innerHTML='gender is female';
+            }else{(document.getElementById('error')).innerHTML='you have no selected any gender';
+
+            }
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>covid19 registration form</title>
+    <style>
+        .heading{
+            text-align:center;
+            margin:40px;
+            color:rgb(19, 19, 100);
+        }
+        .wrapped{
+            border:4px solid rgb(19, 19, 100);
+            margin: 20px;
+        }
+        form{
+            margin:40px 100px;
+        }
+        .display{
+            display:flex;
+            margin:20px 0px;
+        }
+        .flex1{
+            flex: 1;
+        }
+        .flex2{
+            flex: 2;
+        }
+        input{
+            height: 40px;
+            border:1px solid gray;
+            border-radius:5px;
+            margin:10px 0px;
+        }
+        #securityNumber, #date{
+            width:90%;      
+        }
+        #firstName, #secondName{
+            width:90%;
+        }
+        #fe-male, #male{
+            margin:0px 40px;
+        }
+        #address,#sAddress, #postal{
+            width:95%;
+        }
+        #email, #pnumber, #city, #state, #insurance, #iId{
+            width:90%;
+            flex: 1;
+            margin-right:55px;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <div class='wrapped'>
+    <h1 class='heading'>COVID-19 vaccination form</h1>
+    <hr>
+    <form name="myform" method="post" action="" novalidate>
+        <div class=display>
+            <div class="flex1">
+                <h3>Name</h3>
+                <input type='text' id="firstName" name="firstName">
+                <label id="userErr">first name</label>
+            </div>
+            <div class='flex1'>
+                <br><br><br>
+                <input type="text" id="secondName" name="secondName">
+                <label id="userErr1">second name</label>
+            </div>
+            <div class='flex2'>
+                 <h3>National security number</h3>
+                 <input type="text" id="securityNumber" name="securityNumber"><div><span id="userErr2"></span></div>
+            </div>
+        </div>
+        <div class='display'>
+            <div class='flex2'>
+                <h3>Birth Date</h3>
+                <input type="date" id='date' name="date"> 
+                <label id="userErr3">Date</label>
+            </div>
+            <div class="flex1">
+                <h3>Gender</h3>
+                <div class='display'>
+                <input type="radio" name="gender" value="fe-male" id="fe-male"><div><span id="userErr4"></span></div> 
+                <h3 >Female</h3>
+                </div>
+            </div>
+            <div class='flex1'>
+                <br><br>
+                <div class='display'>
+                <input type="radio" name="gender" value="male" id="male"><div><span id="userErr5"></span></div> 
+                <h3>Male</h3>
+                </div>
+            </div>
+                
+        </div>
+        <div class='display'>
+            <div class='flex1'>
+                <h3>Email</h3>
+                <input type="email" name="email" id="email"> 
+                <label id="userErr6">example@example.com</label>
+            </div>
+            <div class='flex1'>
+                <h3>Phone Number</h3>
+                <input type="number" name="pnumber" id="pnumber"> 
+                <label id="userErr7">Please enter a valid phone number</label>
+            </div>
+        </div>
+        <h3>Address</h3>
+        <input type="text" id="address" name="address"> <br>
+        <label id="userErr8">street address</label>
+        <br><br>
+        <input type="text" id="sAddress" name="sAddress"><br>
+        <label id="userErr9">street address line 2</label>
+        <br><br>
+        <div class='display'>
+            <div class="flex1">
+                <input type="text" id="city" name="city">
+                <label id="userErr10">City</label>
+            </div>
+            <div class='flex1'>
+                <input type="text" id="state" name="state">
+                <label id="userErr11">State/province</label>
+            </div>
+        </div>
+        <input type="text" id="postal" name="postal">
+        <label id="userErr12">Postal/Zip code</label>
+        <div class='display'>
+            <div class='flex1'>
+                <h3>Insurance company</h3>
+                <input type="text" name="insurance" id="insurance"><div><span id="userErr13"></span></div> 
+            </div>
+            <div class='flex1'>
+                <h3>Insurance ID</h3>
+                <input type="number" name="iId" id="iId"><div><span id="userErr14"></span></div> 
+            </div>
+        </div>
+        <div style="text-align: center;">
+	                 	<input type="reset" onclick="return addRow(event)"  name="register" value="Save">
+	                 	<input type="reset"  name="cancel" value="Cancel">
+	                </div>
+        </form>
+        <div class="mytable">
+        <table id="table" name="table" border="1" align="center">
+            <tr>
+                <th>first name</th>
+                <th>second name</th>
+                <th>security number</th>
+                <th>date</th>
+                <th>email</th>
+                <th>phone number</th>
+                <th>address</th>
+                <th>street</th>
+                <th>city</th>
+                <th>state</th>
+                <th>zip code</th>
+                <th>insurance company</th>
+                <th>insurance id</th>
+                <th>Action</th>
+
+            </tr>
+        </table>
+    </div>
+    </div>
+    <script>
+        var firstName = document.forms['myform']['firstName'];
+        var secondName = document.forms['myform']['secondName'];
+        var securityNumber = document.forms['myform']['securityNumber'];
+        var date = document.forms['myform']['date'];
+        var email = document.forms['myform']['email'];
+        var pnumber = document.forms['myform']['pnumber'];
+        var address = document.forms['myform']['address'];
+        var sAddress = document.forms['myform']['sAddress'];
+        var city = document.forms['myform']['city'];
+        var state = document.forms['myform']['state'];
+        var postal = document.forms['myform']['postal'];
+        var insurance = document.forms['myform']['insurance'];
+        var iId = document.forms['myform']['iId'];
+
+        var fName_error = document.getElementById('userErr');
+        var sName_error = document.getElementById('userErr1');
+        var sNumber_error = document.getElementById('userErr2');
+        var date_error = document.getElementById('userErr3');
+        var female_error = document.getElementById('userErr4');
+        var male_error = document.getElementById('userErr5');
+        var email_error = document.getElementById('userErr6');
+        var pnumber_error = document.getElementById('userErr7');
+        var address_error = document.getElementById('userErr8');
+        var sAddress_error = document.getElementById('userErr9');
+        var city_error = document.getElementById('userErr10');
+        var state_error = document.getElementById('userErr11');
+        var postal_error = document.getElementById('userErr12');
+        var insurance_error = document.getElementById('userErr13');
+        var iId_error = document.getElementById('userErr14');
+
+       function addRow(event){
+           event.preventDefault();
+        if (firstName.value == "") {
+                  firstName.style.border = "2px solid red";
+                  fName_error.textContent = "first name is required";
+                  fName_error.style.color = "red";
+                  
+        }if (secondName.value == "") {
+            alert('Second')
+                  secondName.style.border = "2px solid red";
+                  sName_error.textContent = "second name is required";
+                    sName_error.style.color = "red";
+                  
+        } if (securityNumber.value == "") {
+                  securityNumber.style.border = "2px solid red";
+                  sNumber_error.textContent = "security number is required";
+                  sNumber_error.style.color = "red";
+                  
+        } if (date.value == "") {
+                  date.style.border = "2px solid red";
+                  date_error.textContent = "date is required";
+                  date_error.style.color = "red";
+                  
+        } if (email.value == "") {
+                  email.style.border = "2px solid red";
+                  email_error.textContent = "email is required";
+                    email_error.style.color = "red";
+                  
+        } if (pnumber.value == "") {
+                  pnumber.style.border = "2px solid red";
+                  pnumber_error.textContent = "phone number is required";
+                  pnumber_error.style.color = "red";
+                  
+        } if (address.value == "") {
+                  address.style.border = "2px solid red";
+                  address_error.textContent = "address is required";
+                  address_error.style.color = "red";
+                
+        } if (sAddress.value == "") {
+                  sAddress.style.border = "2px solid red";
+                  sAddress_error.textContent = "street address is required";
+                  sAddress_error.style.color = "red";
+        } if (city.value == "") {
+                  city.style.border = "2px solid red";
+                  city_error.textContent = "city name is required";
+                  city_error.style.color = "red";
+        } if (state.value == "") {
+                  state.style.border = "2px solid red";
+                  state_error.textContent = "state name is required";
+                  state_error.style.color = "red";
+                
+        }if (postal.value == "") {
+                  postal.style.border = "2px solid red";
+                  postal_error.textContent = "state name is required";
+                  postal_error.style.color = "red";
+                
+        } 
+        if (insurance.value == "") {
+                  insurance.style.border = "2px solid red";
+                  insurance_error.textContent = "insurance company name is required";
+                  insurance_error.style.color = "red";
+        }if (iId.value == "") {
+                  iId.style.border = "2px solid red";
+                  iId_error.textContent = "insurance id is required";
+                  iId_error.style.color = "red";
+        }else{
+            alert('Hello');
+             var person = 
+	                          {
+	                            pfName: firstName.value,
+	                            psName: secondName.value,
+	                            psecurityNumber: securityNumber.value,
+	                            pdate: date.value,
+                                pemail: email.value,
+                                ppnumber: pnumber.value,
+                                paddress: address.value,
+                                psAddress: sAddress.value,
+                                pcity: city.value,
+                                pstate: state.value,
+                                ppostal: postal.value,
+                                pinsurance: insurance.value,
+                                piId: iId.value
+
+	                          };
+                            console.log(person);
+             var table = document.getElementsByTagName('table')[0];
+             var newRow = table.insertRow(table.rows.length);
+
+                      var cel1 = newRow.insertCell(0);
+	                  var cel2 = newRow.insertCell(1);
+	                  var cel3 = newRow.insertCell(2);
+	                  var cel4 = newRow.insertCell(3);
+	                  var cel5 = newRow.insertCell(4);
+                      var cel6 = newRow.insertCell(5);
+                      var cel7 = newRow.insertCell(6);
+                      var cel8 = newRow.insertCell(7);
+                      var cel9 = newRow.insertCell(8);
+                      var cel10 = newRow.insertCell(9);
+                      var cel11 = newRow.insertCell(10);
+                      var cel12 = newRow.insertCell(11);
+                      var cel13 = newRow.insertCell(12);
+                      var cel14 = newRow.insertCell(13);
+            
+              var UpdateButton=document.createElement("button");
+	                  var DeleteButton=document.createElement("button");
+	                  				  
+					  UpdateButton.style.backgroundColor = "green";
+					  DeleteButton.style.backgroundColor = "red";
+					  UpdateButton.style.color="white"
+					  DeleteButton.style.color="white";
+
+                      cel1.innerHTML = person.pfName;
+	                  cel2.innerHTML = person.psName;
+	                  cel3.innerHTML = person.psecurityNumber;
+	                  cel4.innerHTML = person.pdate;
+                      cel5.innerHTML = person.pemail;
+                      cel6.innerHTML = person.ppnumber;
+                      cel7.innerHTML = person.paddress;
+                      cel8.innerHTML = person.psAddress;
+                      cel9.innerHTML = person.pcity;
+                      cel10.innerHTML = person.pstate;
+                      cel11.innerHTML = person.ppostal;
+                      cel12.innerHTML = person.pinsurance;
+                      cel13.innerHTML = person.piId;
+	                  cel14.appendChild(UpdateButton); 
+	                  UpdateButton.innerHTML="Update";
+					  cel14.appendChild(DeleteButton);
+					  DeleteButton.innerHTML="Remove";
+            var RowIndex;
+
+					  DeleteButton.addEventListener("click",function()
+					  	{
+							for(var j=0;j<table.rows.length;j++){
+					
+						
+								table.rows[j].onclick=function()
+								{
+									var txt;
+
+									if (confirm("Prees Okey, If you want to delete data.")) 
+									{
+								        RowIndex=this.rowIndex;
+									  	table.deleteRow(RowIndex);
+								    } 
+								    else 
+								    {
+								        txt = "You pressed Cancel!";
+								    }
+								};
+							}
+						});
+        UpdateButton.addEventListener("click",function()
+						{
+							for(var i=1;i<table.rows.length;i++)
+							{
+								table.rows[i].onclick=function()
+								{
+									document.getElementById("firstName").value=this.cells[0].innerHTML;
+									document.getElementById("secondName").value=this.cells[1].innerHTML;
+									document.getElementById("securityNumber").value=this.cells[2].innerHTML;
+									document.getElementById("date").value=this.cells[3].innerHTML;
+                                    document.getElementById("email").value=this.cells[3].innerHTML;
+                                    document.getElementById("pnumber").value=this.cells[3].innerHTML;
+                                    document.getElementById("address").value=this.cells[3].innerHTML;
+                                    document.getElementById("sAddress").value=this.cells[3].innerHTML;
+                                    document.getElementById("city").value=this.cells[3].innerHTML;
+                                    document.getElementById("state").value=this.cells[3].innerHTML;
+                                    document.getElementById("postal").value=this.cells[3].innerHTML;
+                                    document.getElementById("insurance").value=this.cells[3].innerHTML;
+                                    document.getElementById("iId").value=this.cells[3].innerHTML;
+        
+								};
+							}
+						});
+
+						return true;
+
+
+
+
+
+
+
+        }
+
+        } 
+    </script>
+</body>
+</html>

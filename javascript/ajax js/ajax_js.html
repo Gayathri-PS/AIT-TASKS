@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajax_js</title>
+</head>
+<body>
+    <p id='result'>content of result will be replaced by server response</p>
+    <button type='button' onclick='displayAjaxInfo()'>display ajax intro</button>
+    <script>
+    function displayAjaxInfo() {
+    var request = new XMLHttpRequest();
+    request.open("GET", "https://jsonplaceholder.typicode.com/users");
+    request.onreadystatechange = function() {
+        if(this.readyState === 4 && this.status === 200) {
+            // document.getElementById("result").innerHTML = this.responseText;
+            console.log(this.response)
+        }
+    };
+    request.send();
+}
+</script>
+</body>
+</html>

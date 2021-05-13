@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>conditions</title>
+
+</head>
+
+<body>
+    <script>
+        let isclassthere = 'yes';
+        if (isclassthere === 'yes') {
+            alert('hi guys, we have a class');
+        }
+
+
+        let age = 22;
+        if (age >= 18) {
+            alert('person is eligible for vote');
+        } else {
+            alert('person is not eligible for vote');
+        }
+
+
+        let input = 'sub-admin';
+        switch (input) {
+            case 'user': alert('you only have user rights');
+                break;
+            case 'sub-admin': alert('you are a sub-admin');
+                break;
+            case 'admin': alert('you are a admin');
+                break;
+            case 'default': alert('you dont have any rights');
+                break;
+        }
+        
+        let marks = 90;
+        if (marks >= 75) {
+            alert('you should grade him A+');
+        } else if (marks < 75 && marks >= 70) {
+            alert('should grade him A');
+        } else if (marks < 70 && marks >= 60) {
+            alert('should grade him B');
+        } else if (marks < 60 && marks >= 50) {
+            alert('should grade him C');
+        } else {
+            alert('should him failed');
+        };
+
+        let inputs='gayathri';
+        switch(inputs){
+            case'gayathri':alert('hi am gayatrhi');
+            break;
+            case 'prasanthi':alert('hi am prasanthi');
+            break;
+            case 'rajani':alert('hi am rajani');
+        };
+
+    </script>
+</body>
+
+</html>

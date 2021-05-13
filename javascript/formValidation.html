@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Valida</title>
+    <!-- <script></script> -->
+<style>
+</style>
+
+</head>
+<body>
+    
+<section>
+    <form name="myform" method="post" action="fabinocci.html" novalidate>
+  
+        <input type="text"id="firstName" placeholder="enter user name"><div><span id="userErr"></span></div> 
+        <input type="email" id="email" placeholder="email"> <div><span id="userErr1"></span></div>
+        <input type="password" id="psw" placeholder="password"><div><span id="userErr2"></span></div>
+        <input type="password" id="conformPassword" placeholder="conform passwords"><div><span id='userErr3'></span></div>
+        <button type="button" onclick="validateTheForm(event)">Submit</button>
+        
+    </form>
+</section>
+
+
+<script>
+
+function validateTheForm(e) {
+    // document.getElementById('firstName')
+    e.preventDefault();
+    console.log(document);
+   let userName =  document.getElementById("firstName");
+   let email =  document.getElementById("email");
+   let psw =  document.getElementById("psw");
+   let conformPassword =  document.getElementById("conformPassword");
+   
+//    console.log(userName.value + email.value + psw.value  + conformPassword.value)
+console.log(typeof userName.value)
+
+if(userName.value.length < 4 || userName.value.length > 12){
+    userName.style.border = "1px solid red";
+    let userErr = document.getElementById('userErr');
+    userErr.innerText = "not a proper user name";
+    userErr.style.color = "red";
+
+
+
+}else{
+    userName.style.border = "1px solid green";
+    document.getElementById('userErr').style.display="none";
+}
+            let atposition= email.value.indexOf("@");
+            let dotposition = email.value.lastIndexOf('.');
+            if(atposition < 1||dotposition === atposition + 2){
+                email.style.border = "1px solid red";
+                let userErr1 = document.getElementById('userErr1');
+                userErr1.innerText = "not a proper user email";
+                userErr1.style.color = "red";
+               
+            }else{
+            email.style.border = "1px solid green";
+            document.getElementById('userErr1').style.display="none";
+}
+if(psw.value=="" || psw.value.length <=3 || psw.value.length >= 12){
+    psw.style.border = "1px solid red";
+    let userErr2 = document.getElementById('userErr2');
+    userErr2.innerText = "not a proper user password";
+    userErr2.style.color = "red";
+
+}else{
+    psw.style.border = "1px solid green";
+    document.getElementById('userErr2').style.display="none";
+}
+if(psw.value === conformPassword.value){
+    document.getElementById('userErr3').style.display="none";
+    conformPassword.style.border = "1px solid green";
+        }else{
+
+            conformPassword.style.border = "2px solid red";
+            let userErr3 = document.getElementById('userErr3');
+            userErr3.innerText = "not a proper user conformpassword";
+            userErr3.style.color = "red";
+        }
+
+           
+
+           
+
+
+// let userData = {
+//     firstName  var atposition= email.value.indexOf("@");
+        
+//     lastName : "varma",
+//     email : "siva@gmail.com",
+//     value : 'gayathri'
+// }
+// console.log(userData.value)
+
+}
+</script>
+
+</body>
+</html>

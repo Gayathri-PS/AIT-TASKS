@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRID</title>
+    <style>
+        .parent {
+            height: 50px;
+            display: grid;
+            /* grid: auto / repeat(3, auto); */
+            /* grid-gap: 15px; */
+            /* grid-template-columns: 25% 50% 25%; */
+            grid-template-columns: 300px 300px 300px;
+            justify-content: center;
+        }
+        
+        .parent,
+        .child {
+            border: 2px solid green;
+            padding: 15px;
+        }
+        .absolute{
+            position:absolute;
+
+        }
+        .child1{
+             right:100px;
+        }
+        .child2{
+            left:100px;
+        }
+        .child3{
+            left:40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent absolute">
+        <div class="child child1">CHILD 1</div>
+        <div class="child child2">CHILD 2</div>
+        <div class="child child3">CHILD 3</div>
+       
+    </div>
+</body>
+
+</html>

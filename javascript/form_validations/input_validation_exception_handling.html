@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input-validation for exception handing</title>
+</head>
+<body>
+    <input type="text" id="text">
+    <button type='button' onclick="myFunction()" value="button">click here</button>
+    <p id='demo'></p>
+    <p id='demo1'></p>
+    <script>
+
+        
+        //  console.log(name)
+        // var name = "gayathri";
+        function myFunction(){
+            var x = '';
+            x= document.getElementById('text').value;
+            try{
+                if(x=='') throw 'empty';
+                if(isNaN(x)) throw 'not a number';
+                x=Number(x);
+                if(x<5) throw 'too low';
+                if(x>10) throw 'too high';
+            }catch(e){
+                document.getElementById('demo').innerHTML="input is "+ e
+            }finally{
+                document.getElementById('demo1').innerHTML='x value with in 5 to 10';
+            }
+
+
+        }
+
+    </script>
+</body>
+</html>

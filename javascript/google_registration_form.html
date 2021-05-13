@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>google</title>
+<style>
+    input{
+	width: 700px;
+	height: 30px;
+	border: 1px solid black;
+	border-left:none;
+    border-right:none;
+    border-top:none
+}
+</style>
+</head>
+<body>
+ <form name="myform" method="post" action="facebook.html" novalidate>
+        <h1>
+            
+            Contact information</h1>
+        <hr>
+        <input type="text" id="formdiscription" placeholder="Form discription"> <div><span id="userErr"></span></div><br><br>
+        <label>Name</label><br>
+        <input type="text"  id="firstName" placeholder="short answer text"> <div><span id="userErr1"></span></div>
+        <br><br>
+        <label>Email</label><br>
+        <input type="email"  id="email" placeholder="short answer text"> <div><span id="userErr2"></span></div>
+        <br><br>
+        <label>Address</label><br>
+        <input type="text"  id="address" placeholder="long answer text" > <div><span id="userErr3" required></span></div>
+        <br><br>
+         <label>Phone number</label><br>
+        <input type="tel"  id="phone" placeholder="short answer text"><div><span id="userErr4"></span></div>
+        <br><br>
+        <label>Comments</label><br>
+        <input type="text"  id="comments" placeholder="long answer text"><div><span id="userErr5"></span></div>
+        <br><br>
+        <button type="button" onclick="validateTheForm(event)">Submit</button>
+    </form>
+    <script>
+    function validateTheForm(e) {
+        e.preventDefault();
+    let discription =  document.getElementById("formdiscription");
+    let userName =  document.getElementById("firstName");
+    let email =  document.getElementById("email");
+    let Address =  document.getElementById("Address");
+    let phone =  document.getElementById("phone");
+    let comments =  document.getElementById("comments");
+    let atposition= email.value.indexOf("@");
+    let dotposition = email.value.lastIndexOf('.');
+
+
+    if(discription.value.length < 2 || discription.value.length > 500){
+    discription.style.border = "1px solid red";
+    let userErr = document.getElementById('userErr');   
+    userErr.innerText = "not a proper form discription";
+    userErr.style.color = "red";
+
+    }else{
+    discription.style.border = "1px solid green";
+    document.getElementById('userErr1').style.display="none";
+    }
+    
+
+
+    if(userName.value.length < 4 || userName.value.length > 12){
+    userName.style.border = "1px solid red";
+    let userErr1 = document.getElementById('userErr1');
+    userErr1.innerText = "not a proper user name";
+    userErr1.style.color = "red";
+
+    }else{
+    userName.style.border = "1px solid green";
+    document.getElementById('userErr1').style.display="none";
+    }
+
+
+
+
+
+
+ if(atposition < 1||dotposition === atposition + 2){
+                email.style.border = "1px solid red";
+                let userErr2 = document.getElementById('userErr2');
+                userErr2.innerText = "not a proper user email";
+                userErr2.style.color = "red";
+               
+            }else{
+            email.style.border = "1px solid green";
+            document.getElementById('userErr2').style.display="none";
+}
+
+
+
+
+
+if(phone.value.length== ""||phone.value.length > 10||phone.value.length < 10|| phone.value.length=="  "){
+    phone.style.border = "1px solid red";
+    let userErr4 = document.getElementById('userErr4');
+    userErr4.innerText = "not a proper user phone number";
+    userErr4.style.color = "red";
+    
+    
+
+}else{
+     phone.style.border = "1px solid green";
+    document.getElementById('userErr4').style.display="none";
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+    }
+    </script>
+</body>
+</html>

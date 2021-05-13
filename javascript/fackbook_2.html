@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fackbook</title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create_account</title>
+<style>
+    .border{
+        border:1px solid blue;
+        background-color:blue;
+        color:white;
+        width:98%;
+        padding:15px;
+        text-align:center;
+
+    }
+    .text{
+        text-align:center;
+    }
+    .display{
+        display:flex;
+    }
+    .flex{
+        flex:1;
+    }
+    input{
+        width: 700px;
+	    height: 30px;
+	    border: 1px solid gray; 
+        border-radius:2px;
+        margin:10px;
+    }
+    button{
+        border:1px solid rgb(97, 97, 245);
+        background-color:rgb(75, 75, 240);
+        color:white;
+        width:600px;
+        padding:12px;
+        margin:20px;
+        border-radius:5px;
+    }
+
+</style>
+</head>
+<body>
+    <form name="myform" method="post" action="fackbook_create_account.html" novalidate>
+        <div class="text">
+        <div class='border'>join facebook</div>
+        <h2>what's your name</h2>
+        <p>Enter the name you see in real life.</p>
+        </div>
+        <label>Date of birth</label><br>
+        <div class='display'>
+        <input type="number" id="number"><div><span id="userErr"></span></div>  
+        <input type="month" id="month"><div><span id="userErr1"></span></div>     
+        <input type="year" id="year"><div><span id="userErr1"></span></div>
+        </div>
+<div class="text">
+ <button type="button" onclick="validateTheForm(event)">Submit</button>
+</div>
+</form>
+<script>
+    function validateTheForm(e) {
+    e.preventDefault();
+    let date =  document.getElementById("number"); 
+    let month =  document.getElementById("month");  
+    let month =  document.getElementById("year"); 
+
+
+    if(date.value==""|| date.value.length>2){
+    date.style.border = "1px solid red";
+    let userErr = document.getElementById('userErr');
+    userErr.innerText = "not a proper user name";
+    userErr.style.color = "red";
+
+}else{
+    date.style.border = "1px solid green";
+    document.getElementById('userErr').style.display="none";
+}
+}
+
+</script>
+</body>
+</html>

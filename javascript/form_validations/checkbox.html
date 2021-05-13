@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checkbox</title>
+</head>
+<body>
+    <p>Select your courses:</p>
+    <input type="checkbox" name="courses" id="ui development" value="ui development">ui development
+    <input type="checkbox" name="courses" id="angular" value="angular">angular
+    <input type="checkbox" name="courses" id="reactjs" value="reactjs">reactjs
+    <input type="checkbox" name="courses" id="jquery" value="jquery">jquery
+    <button id="btn">Get Selected courses</button>
+
+    <script>
+        function CheckboxValues() {
+        let checkboxes = document.querySelectorAll('input[name="courses"]:checked');
+        let values = [];
+        checkboxes.forEach((checkbox) => {
+        values.push(checkbox.value);
+    });
+        return values;
+}
+
+       let btn = document.querySelector('#btn');
+btn.addEventListener('click', function() {
+    alert(CheckboxValues());
+});
+    </script>
+</body>
+</html>

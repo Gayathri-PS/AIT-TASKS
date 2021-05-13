@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>set method</title>
+</head>
+<body>
+    <script src="jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#html').click(function(){
+                $('#paragraph').html('this is<b>pragraph</b>');
+            });
+            $('#text').click(function(){
+               $('#paragraph1').text('this is <b>paragraph</b>');  
+            });
+        });
+    </script>
+    <p id="paragraph">hai this gayathri</p>
+    <p id="paragraph1">hai this ps</p>
+    <button id="html">html button</button>
+    <button id="text">text button</button>
+
+</body>
+</html>

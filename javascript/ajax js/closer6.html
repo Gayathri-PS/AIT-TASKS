@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>closer6</title>
+</head>
+<body>
+    <script>
+        var addTo = function(passed){
+            var add = function(inner){
+                return passed+inner;
+            };
+            return add;
+        };
+        console.log(addTo(3));
+        var addThree = new addTo(3);
+        var addFour = new addTo(4);
+            console.log(addThree);
+            console.log(addFour);
+        console.log(addThree(1));
+        console.log(addFour(1));
+    </script>
+</body>
+</html>

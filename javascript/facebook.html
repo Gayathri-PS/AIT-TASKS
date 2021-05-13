@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>facebook</title>
+    <style>
+        .text{
+            text-align:center;
+        }
+        input{
+            width: 400px;
+	        height: 40px;
+	        border: 1px solid rgb(156, 155, 155); 
+            background-color:rgb(247, 244, 244);
+            margin:5px;
+
+        }
+        .button1{
+            border:1px solid blue;
+            background-color:blue;
+            color:white;
+            width:400px;
+            height:40px;
+        }
+        .button2{
+            border:1px solid rgb(145, 235, 145);
+            background-color:rgb(117, 209, 117);
+            color:white;
+            width:200px;
+            height:40px;  
+        }
+        
+    </style>
+</head>
+<body>
+    <form name="myform" method="post" action="fabinocci.html" novalidate></form>
+        <div class='text'>
+            <div><span id="userErr1"></span></div>
+        <img src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg" width="112" class="img" alt="facebook">
+        <br>
+        <input type="email"  id="email" placeholder="email"> <div><span id="userErr1"></span></div>
+        <input type="password" id="Password" placeholder="passwords"><div><span id="userErr1"></span></div>
+        <button type="button" onclick="validateTheForm(event)" class="button1"><b>log in</b></button>
+        <br><br>
+        <button type="button" class="button2"><a href="google_registration_form.html">create new account</a></button>
+        <br>
+        <a href="facebook.html">forgot password</a>
+        </div>
+    </form>
+    <script>
+        function validateTheForm(e) {
+            let email =  document.getElementById("email");
+            let password =  document.getElementById("Password");
+            let atposition= email.value.indexOf("@");
+            let dotposition = email.value.lastIndexOf('.');
+            if(atposition < 1||dotposition === atposition + 2){
+                email.style.border = "1px solid red";
+                let userErr1 = document.getElementById('userErr1');
+                userErr1.innerText = "the email address or phone number that we are entered doesnt match any account";
+                userErr1.style.color = "red";
+               
+            }else{
+            email.style.border = "1px solid green";
+            document.getElementById('userErr1').style.display="none";
+}
+
+   
+if(password.value=="" || password.value.length <=3 || password.value.length >= 12){
+    password.style.border = "1px solid red";
+    let userErr2 = document.getElementById('userErr2');
+    userErr2.innerText = "not a proper user password";
+    userErr2.style.color = "red";
+
+}else{
+    password.style.border = "1px solid green";
+    document.getElementById('userErr1').style.display="none";
+}
+}
+
+
+    </script>
+</body>
+</html>

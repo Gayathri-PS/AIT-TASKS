@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object constructor</title>
+</head>
+<body>
+    <script>
+        function student(rNumber,fname,lname,email,address){
+            this.rollNumber = rNumber;
+            this.firstname = fname;
+            this.lastname = lname;
+            this.email = email;
+             this.enrollment = function(){
+                 return this.rollNumber + ' has enrolled for full stack development, her first name is '+ this.firstname + ', her lastname is ' + this.lastname + ' and her email is ' + this.email;
+             }
+
+             }
+        var sObj = new student('16hr1a0134','ps','gayathri', 'gayathri@gmail.com');
+        console.log(sObj.enrollment());
+        student.prototype.gender = 'female';
+        student.prototype.phoneNumber = 'pno';
+       
+        student.prototype.fullDetails = function(){
+                 return this.rollNumber + ' has enrolled for full stack development, her first name is '+ this.firstname + ', her lastname is ' + this.lastname + ' her email is ' + this.email + 'gender' + this.gender + 'phone number' + this.phoneNumber;
+             }
+        var sObj1 = new student('16hr1a0122','ps','gayi', 'gayi@gmail.com','female','346789754');
+        console.log(sObj1.fullDetails());
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition transform task</title>
+    <style>
+        * {
+            margin: 10px 100px;
+        }
+
+        .heading {
+            text-align: center;
+            color: red;
+
+        }
+
+        .transition {
+            border: 1px solid red;
+            background-color: red;
+            margin: 10px 100px;
+            width: 100px;
+            height: 100px;
+            transition: width 1s linear 1s;
+        }
+
+        .transition:hover {
+            width: 300px;
+        }
+
+        .transition1 {
+            border: 1px solid blue;
+            background-color: blue;
+            margin: 10px 100px;
+            width: 100px;
+            height: 100px;
+            transition: width 1s linear 1s;
+        }
+
+        .transition1:hover {
+            width: 300px;
+        }
+
+        .transpro {
+            border: 1px solid red;
+            background-color: red;
+            height: 50px;
+            width: 60px;
+            transition: 1s linear 1s;
+            transition: height 2s, width 2s 2s;
+        }
+
+        .transpro:hover {
+            height: 150px;
+            width: 200px;
+            border: 1px solid green;
+            background-color: green;
+        }
+
+        .parent {
+            border: 1px solid black;
+            padding: 40px;
+            width: 300px;
+        }
+
+        .circle {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: 1px solid green;
+            background-color: green;
+            transition: all 2s linear 1s;
+        }
+
+        .circle:hover {
+            width: 150px;
+            height: 150px;
+            border-radius: 0%;
+            border: 1px solid red;
+            background-color: red;
+        }
+
+        .slide {
+            border: 1px solid black;
+            background-color: skyblue;
+            color: blue;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+        }
+
+        .slide:hover {
+            border: 1px solid black;
+            background-color: blue;
+            color: skyblue;
+            transition: all 2s linear 1s;
+        }
+
+
+        .button {
+            display: inline-block;
+            padding: 0.75rem 1.25rem;
+            border-radius: 10rem;
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 1rem;
+            letter-spacing: 0.15rem;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+            z-index:1;
+        }
+
+        .button:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #0cf;
+            border-radius: 10rem;
+            z-index: -2;
+        }
+
+        .button:before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            background-color: #008fb3;
+            transition: all 0.3s;
+            border-radius: 10rem;
+            z-index: -1;
+        }
+
+        .button:hover {
+            color: #fff;
+        }
+
+        .button:hover:before {
+            width: 100%;
+        }
+
+        /* optional reset for presentation */
+        * {
+            font-family: Arial;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .container {
+            padding-top: 50px;
+            margin: 0 auto;
+            width: 100%;
+            text-align: center;
+        }
+        .animation{
+            height: 40px;
+            width: 40px;
+            background-color: red;
+            position: relative;
+            animation-name:example;
+            animation-duration:2s;
+            animation-delay:2s;
+            animation-iteration-count: 3;
+            animation-direction: alternate-reverse;  
+            animation-fill-mode:backwards;
+        }
+        @keyframes example{
+        0%   {background-color:red; left:0px; top:0px;}
+        100%  {background-color:yellow; left:200px; top:0px;}
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#" class="button">Hover me</a>
+    <h1 class="heading"><u>Transition and transformation</u></h1>
+    <h2>excercise</h2>
+    <p>apply a 1 second transition to the width property of the div one. apply also the transition to the width
+        property.</p>
+    <div class="transition"></div>
+    <div class="transition1"></div>
+    <div class="transpro"></div>
+    <div class="parent">
+        <div class="circle"></div>
+    </div>
+    <div class="slide">sedule a demo now</div>
+    <div class="animation"></div>
+</body>
+
+</html>

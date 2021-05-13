@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form_validation</title>
+</head>
+<body>
+
+    <form name="myform" method="post" action="success.html" novalidate>
+        <label name="name">Name  :  </label> 
+        <input type="text" placeholder="please enter your name" name="firstName">
+        <br><br>
+        <label>Email  : </label>
+        <input type="email" placeholder="please enter your email" name="email1" >
+        <br><br>
+        <label>Password  :</label>
+        <input type="password" placeholder="please enter your password"  name="pass1">
+        <br><br>
+        <label>conform Password  :</label>
+        <input type="password" placeholder="conform password"  name="pass2">
+        <br><br>
+        <input type="button" value="validate" onclick="validation()">
+</form>
+   
+    <script>
+        function validation(){
+           
+            var name=document.myform.firstName;
+            console.log(name);
+            if(name.value=="" || name.value.length <=3 || name.value.length >= 12){
+                name.style.border = "1px solid red";
+                // return false;
+               
+            }
+            else{
+                name.style.border = "2px solid green";
+                // return true;
+            }
+            var email2=document.myform.email1;
+            console.log(email2);
+            var atposition= email2.value.indexOf("@");
+            var dotposition = email2.value.lastIndexOf('.');
+            if(atposition < 1||dotposition === atposition + 2){
+                email2.style.border = "1px solid red";
+                return false;
+            }
+            else{
+                email2.style.border = "2px solid green";
+                
+            }
+            var password=document.myform.pass1;
+            var cpassword=document.myform.pass2;
+            if(password.value=="" || password.value.length <=3 || password.value.length >= 12){
+                password.style.border = "1px solid red";
+               
+            }else{
+                password.style.border = "2px solid green";
+            }
+       
+        if(password.value === cpassword.value){
+            cpassword.style.border = "1px solid green";
+        }else{
+            cpassword.style.border = "2px solid red";
+            
+        }
+    }
+
+    
+
+    </script>
+</body>
+</html>

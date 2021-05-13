@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Postions-html</title>
+<style>
+	.parent{
+		margin-top: 150px;
+		border: 1px solid black;
+		postion: relative;
+	}
+	.parent 
+	.child {
+		border: 1px solid red;
+		padding:30px;
+		margin: 15px;
+	}
+	.static {
+		position: static;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right:0;
+		background-color: pink;
+	}
+	.relative {
+		position: relative;
+		top: 15px;
+		right:15px;
+		background-color: green;
+	}
+	.absolute {
+		position: absolute;
+		top: 56px;
+		left:77px;
+		right:77px;
+		background-color: yellow;
+	}
+	
+	.sticky {
+		position: sticky;
+		top: 56px;
+		left:0px;
+		right:0px;
+
+		background-color: red;
+		padding: 10px;
+	}
+	.fixed {
+		position: fixed;
+		bottom: 0px;
+		left:77px;
+		right:77px;
+		background-color: blue;
+		padding: 10px;
+	}
+	
+
+
+</style>
+</head>
+<body>
+		<div class="child sticky">sticky</div>
+	<div class="parent">
+	<div class="child static">static</div>
+	<div class="child relative">relative</div>
+	<div class="child absolute">absolute</div>
+	<div class="child fixed">fixed</div>
+	</div>
+	<div class="parent">
+	<div class="child static">static</div>
+	<div class="child relative">relative</div>
+	<div class="child absolute">absolute</div>
+	<div class="child fixed">fixed</div>
+	</div>
+	<div class="parent">
+	<div class="child static">static</div>
+	<div class="child relative">relative</div>
+	<div class="child absolute">absolute</div>
+	<div class="child fixed">fixed</div>
+	</div>
+	<div class="parent">
+	<div class="child static">static</div>
+	<div class="child relative">relative</div>
+	<div class="child absolute">absolute</div>
+	<div class="child fixed">fixed</div>
+	</div>
+	<div class="parent">
+	<div class="child static">static</div>
+	<div class="child relative">relative</div>
+	<div class="child absolute">absolute</div>
+	<div class="child fixed">fixed</div>
+	</div>
+</body>
+</html>
+  

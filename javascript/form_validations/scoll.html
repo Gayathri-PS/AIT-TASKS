@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scoll</title>
+<style>
+.test{
+    background-color:yellow;
+    transition:all 1s ease-in-out 1s;
+     transform:rotate(90deg);
+     opacity:1;
+     
+}
+.notvisible{
+  opacity:0;
+}
+img{
+  width:150px;
+  height:100px;
+}
+
+
+hr{
+    margin-top:300px;
+}
+</style>
+</head>
+<body  style="height:1500px">
+  <p>scroll this page</p>
+  <hr>
+  <img src="https://static.toiimg.com/photo/72975551.cms" id="myP" alt="image">
+  <script>
+  window.onscroll = function myFunction() {
+  if (document.documentElement.scrollY > 150) {
+    document.getElementById("myP").className = "test";
+  } else {
+    document.getElementById("myP").className = "notvisible";
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checkboxes</title>
+</head>
+<body>
+    <form>
+    <input type="checkbox" name="courses" id="ui development" value="ui development">ui development
+    <input type="checkbox" name="courses" id="angular" value="angular">angular
+    <input type="checkbox" name="courses" id="reactjs" value="reactjs">reactjs
+    <input type="checkbox" name="courses" id="jquery" value="jquery">jquery
+    <h3 id="correct" style= "color:green"> </h3>
+    <h4 id="error" style= "color:red"> </h4>
+    <button type='button' onclick='checkbox()'>submit</button>
+    <h3 id="correct" style= "color:green"> </h3>
+    <h4 id="error" style= "color:red"> </h4>
+    </form>
+    <script>
+        function checkbox(){
+            var valid=false;
+            if(document.getElementById('ui development').checked){
+                valid=true;
+            }else if(document.getElementById('angular').checked){
+                valid=true;
+            }else if(document.getElementById('reactjs').checked){
+                valid=true;
+            }else if(document.getElementById('jquery').checked){
+                valid=true;
+            }if(valid){
+                document.getElementById('correct').innerHTML='submittion successfull';
+            }else{
+                document.getElementById('error').innerHTML='please select any one course';
+            }
+        }
+    </script>
+</body>
+</html>

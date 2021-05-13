@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElemnet by name</title>
+</head>
+<body>
+    <form name="form1">
+        Enter name:<input type="text" name="urname">
+        <br>
+        <input type="button" value="print" onclick="printvalue()">
+    </form>
+    <script>
+        function printvalue(){
+            var name=document.form1.urname.value;
+            alert(name);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stringmethods.html</title>
+</head>
+<body>
+    <script>
+    /*concat method*/
+var x='hello';
+var y='world';
+console.log(x+" "+y);
+/*1 indexof()*/
+var name=('gayathri gaythri');
+console.log(name.indexOf("t",5));
+/*2 lastIndexof()*/
+var product_name=('india india in');
+console.log(product_name.lastIndexOf('india'));
+/*3 charAt*/
+console.log(name.charAt('6'));
+/*4 charCodeAt()*/
+console.log(name.charCodeAt(3));
+/*5 substr*/
+console.log(product_name.substr(4,5));
+/*6 substring*/
+console.log(product_name.substring(4,9));
+/*7 search*/
+let products=('indi indis india indis india indis india');
+console.log(products.search('india'));
+/*8 replace*/
+let names=('My name is rajani');
+console.log(names.replace('rajani','gayathri'));
+/*9 toLowerCase*/
+console.log(names.toLowerCase());
+/*10 toUpperCase*/
+console.log(names.toUpperCase());
+/*11 search*/
+console.log(name.search('t', 5));
+/*12 trim*/
+var product=('      gaya     thri          ');
+console.log(product.trim(''));
+    </script>
+</body>
+</html>

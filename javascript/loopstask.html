@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loops_js_html</title>
+</head>
+<body>
+    <script>
+        let i,j;
+        for(i=0; i<5; i++){
+            for(j=0; j<=i; j++){
+                document.write("*");
+            }
+                document.write("<br>");
+        }
+    var num=151;
+    var originalNum=num;
+    var reverse=0;
+    while(num>0){
+        reverse=(reverse*10)+(num%10);
+        num=parseInt(num/10);
+    }
+    if(originalNum==reverse){
+        document.write(reverse+"it is palindrome number");
+    }else{
+        document.write(reverse+"it is not palindrome number");
+        document.write("<br>");
+    }
+    document.write("<br>");
+
+   var year=2021;
+   if(year%4==0){
+       document.write("leap year")
+   }else if(year%100==0){
+       document.write("not leap year")
+   }else if(year%400==0){
+    document.write("leap year")
+   }else{
+    document.write("not leap year")
+   }
+
+    </script>
+</body>
+</html>

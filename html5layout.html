@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>layout3-html</title>
+	<style>
+		.mainContainer{
+			border: 1px solid black;
+		}
+		.headerBlock{
+			border-bottom: 1px solid black;
+			height: 50px;
+			text-align: center;
+		}
+		.slider{
+			border-bottom:1px solid black;
+			height:50px;
+			text-align: center;
+		}
+		.contentArea{
+			display: flex;
+			height: 450px;
+		}
+		.flex-one{
+			flex: 1;
+			text-align: center;
+		}
+		.mainContent{
+			flex: 2;
+			border-left: 1px solid red;
+			border-right: 1px solid red;
+			text-align: center;
+		}
+		.footer{
+			border-top:1px solid black;
+			height:75px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+		<section class="mainContainer">
+			<header class="headerBlock">header</header>
+			<div class="slider">slider</div>
+			<main class="contentArea">
+				<div class="flex-one">left side bar</div>
+				<div class="mainContent">main content</div>
+				<div class="flex-one">right side bar</div>
+			</main>
+			<footer class="footer">footer</footer>
+		</section>
+</body>
+</html>

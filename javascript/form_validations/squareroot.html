@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>squareroot</title>
+</head>
+<body>
+    <p><span id="result"></span></p>
+    <form>
+    <label>Enter a number:</label>
+    <input type="number" id="number" value="number">
+    <button type="button" onclick="display()" value="submit">click here</button>
+    </form>
+    <script>
+    function display(){
+    //var x=document.getElementById("number").value;
+    document.getElementById("result").innerHTML = Math.sqrt(document.getElementById("number").value);
+    }
+    </script>
+
+
+
+
+    </script>
+</body>
+</html>

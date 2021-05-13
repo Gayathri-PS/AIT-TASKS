@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>pseudo elements</title>
+	<style>
+		h1{
+			border: 1px solid red;
+			padding: 50px;
+			margin: 10px;
+			background: red;
+			color: #fff;
+			position: relative;
+		}
+		h1::after{
+			content: '';
+			background: yellow;
+			padding: 50px;
+			margin: 10px;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			opacity: 1;
+		}
+		h1::before{
+			content: '';
+			background: pink;
+			padding: 10px;
+			margin: 20px;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			opacity:0.5;
+		}
+		
+	</style>
+</head>
+<body>
+
+	<h1>PSEUDO ORIGINAL ELEMENT</h1>
+
+</body>
+</html>

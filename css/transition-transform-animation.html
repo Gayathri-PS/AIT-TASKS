@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition transform animation</title>
+<style>
+     .parent{
+        border: 1px solid green;
+        padding:30px;
+        margin: 20px;
+        display:flex;
+    }
+    .transition, .transform{
+        border: 1px solid green;
+        padding:30px;
+        margin: 20px;
+        width:150px;
+        height:150px;
+       
+    }
+    .transition:hover{
+        width:200px;
+        height:200px;
+    }
+    .transform{
+        transition:all 3s ease-in-out 4s; 
+    }
+    .transform:hover{
+        transform:rotate(360deg);
+        transform:scale(1.4);
+        transform:skew(50deg);
+       
+    }
+</style>
+</head>
+<body>
+    <div class="parent">
+        <div class="transition">transition</div>
+        <div class="transform">transform</div>
+    </div>
+
+</body>
+</html>

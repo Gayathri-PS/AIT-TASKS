@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Postionstask-html</title>
+	<style>
+		img {
+			padding-left: 700px;
+		}
+
+		.heading {
+			text-align: center;
+		}
+
+		.text {
+			text-align: center;
+		}
+
+		.sticky {
+			position: sticky;
+			border: 1px solid green;
+			background-color: green;
+			color: white;
+			padding: 20px;
+			margin: 5px;
+			top: 0px;
+			left: 0px;
+			right: 0px;
+			margin: 30px;
+		}
+
+		.parent {
+			margin-left: 30px;
+		}
+
+		.relative {
+			position: relative;
+			border: 1px solid red;
+			background-color: red;
+			color: white;
+			padding: 20px;
+			width: 300px;
+		}
+
+		.part1 {
+			display: inline-block;
+			right: 18%;
+		}
+
+		.part2 {
+			display: inline-block;
+
+		}
+
+		.part3 {
+			display: inline-block;
+			left: 18%;
+		}
+
+		.part4 {
+			display: inline-block;
+			border: 2px solid black;
+			right: 9%
+		}
+
+		.part5 {
+			display: inline-block;
+			border: 2px solid black;
+			left: 9%;
+		}
+
+		.part6 {
+			display: inline-block;
+			margin-bottom: 30px;
+		}
+
+		.static {
+			position: static;
+			border: 1px solid skyblue;
+			background-color: skyblue;
+			padding: 20px;
+			margin: 5px 30px;
+			color: white;
+
+		}
+
+		.absolute {
+			position: absolute;
+			border: 1px solid red;
+			background-color: yellow;
+			color: white;
+			padding: 20px 100px;
+			margin-left: 40px;
+		}
+
+		.abs {
+			position: relative;
+			padding: 15px;
+			margin: 25px;
+		}
+
+		
+
+		.statica {
+			position: static;
+			margin: 230px 30px 5px;
+			border: 1px solid skyblue;
+			background-color: skyblue;
+			padding: 20px;
+			color: white;
+
+		}
+
+		.staticb {
+			position: static;
+			margin: 5px 30px;
+			border: 1px solid skyblue;
+			background-color: skyblue;
+			padding: 20px;
+			color: white;
+		}
+
+		.fixed {
+			position: fixed;
+			bottom: 10px;
+			border: 1px solid red;
+			background-color: red;
+			left: 0px;
+			right: 0px;
+			padding: 20px;
+			margin: 0px 30px;
+			color: white;
+			text-align: center;
+		}
+
+		.abs-child {
+			width: 25%;
+			border: 1px solid red;
+			background-color: green;
+			padding: 25px;
+			color: #FFF;
+			text-align: center;
+		}
+
+		.abs-child-1a {
+			position: absolute;
+			right: 36%;
+			top: 0;
+
+		}
+
+		.abs-child-2a {
+			position: absolute;
+			left: 8.5%;
+			top: 70px;
+
+		}
+
+		.abs-child-2b {
+			position: absolute;
+			right: 8.5%;
+			top: 70px;
+
+		}
+
+		.abs-child-3a {
+			position: absolute;
+			left: 0;
+			top: 140px;
+
+		}
+
+		.abs-child-3b {
+			position: absolute;
+			right: 36%;
+			top: 140px;
+
+		}
+
+		.abs-child-3c {
+			position: absolute;
+			right: 33px;
+			top: 140px;
+
+		}
+	</style>
+</head>
+
+<body>
+	<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8SoYDh_ln-4ThD0XE69iT5K6IGO0-voN0iA&usqp=CAU"
+		alt="achiverit" width="100px" height="100px">
+	<h2 class="heading">POSITIONS</h2>
+	<div class="sticky text">sticky top element</div>
+	<div class="parent text">
+		<div class="relative part1">relative elements</div>
+		<div class="relative part2">relative elements</div>
+		<div class="relative part3">relative elements</div>
+	</div>
+	<div class="parent text">
+		<div class="relative part4">relative elements</div>
+		<div class="relative part5">relative elements</div>
+	</div>
+	<div class="parent text">
+		<div class="relative part6">relative elements</div>
+	</div>
+	<div class="static text">static</div>
+	<div class="static text">static</div>
+	<div class="static text">static</div>
+	<div class="static text">static</div>
+	<div class="static text">static</div>
+	<div class="static text">static</div>
+	<div class="static text">static</div>
+	<div class="abs">
+		<div class="abs-child-1">
+			<div class="abs-child abs-child-1a">ABSOLUTE</div>
+		</div>
+		<div class="abs-child-2">
+			<div class="abs-child abs-child-2a">ABSOLUTE</div>
+			<div class="abs-child abs-child-2b">ABSOLUTE</div>
+		</div>
+		<div class="abs-child-3">
+			<div class="abs-child abs-child-3a">ABSOLUTE</div>
+			<div class="abs-child abs-child-3b">ABSOLUTE</div>
+			<div class="abs-child abs-child-3c">ABSOLUTE</div>
+		</div>
+	</div>
+	<div class="statica text">static</div>
+	<div class="staticb text">static</div>
+	<div class="staticb text">static</div>
+	<div class="staticb text">static</div>
+	<div class="staticb text">static</div>
+	<div class="staticb text">static</div>
+	<div class="fixed text">fixed bottom</div>
+
+</body>
+
+</html>

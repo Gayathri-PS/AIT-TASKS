@@ -1,0 +1,347 @@
+
+*{
+	font-family:sans-serif;
+}.header{
+    display:flex;
+    color:yellow;
+    align-items:center;
+}
+.headerleft{
+    flex: 5;
+    margin-left:100px;
+}
+.headeright{
+    flex: 1;
+    color:black;
+}
+.icons{
+    padding:0px 10px;
+    color:black; 
+}
+.border{
+    display:flex;
+	background-color:black;
+	height:	40px;
+	align-items:center;
+	font-family:sans-serif;
+    padding:50 100px;
+    color:white;
+}
+select.allproducts{
+  padding: 11px;
+  background-color:black;
+  color:white;
+}
+ .firstlink>a:link {
+    color:white;
+    background-color: transparent;
+    text-decoration: none;
+    padding:12px 50px;
+  }
+  .firstlink>a:visited {
+    color:white;
+    background-color:gold;
+    text-decoration:none;
+    
+  }
+  .firstlink>a:hover {
+    color:white;
+    background-color:gold;
+    text-decoration:none;
+  
+  }
+  .firstlink>a:active {
+    color:gold;
+    background-color: ;
+    text-decoration: underline;
+  }
+  .background {
+    background-color:rgb(252, 249, 249);
+    display:flex;
+    
+    align-items:center;
+  }
+  .margin{
+    font-size:500%;
+    margin-top: auto;
+    margin-bottom: auto;;
+}
+  .icon{
+      flex: 1;
+      justify-content:center;
+      margin-left:120px;
+      font-size:300%;
+  }
+  .icon1{
+    flex: 1;
+    justify-content:center;
+    margin-right:10px;
+    font-size:300%;
+  }
+  .flex1 {
+    flex: 4;
+    padding: 50px 50px;
+}
+.button1{
+    border:1px solid peru;
+    padding:20px 35px;
+    background-color:peru;
+    color:white;
+  }
+
+.flex2{
+    flex:4;
+    padding:10px 10px 0px;
+}
+.dresses{
+    display:flex;
+    margin:20px;
+}
+.bigpic{
+    flex:4;
+    margin-left:70px;
+}
+.backgroundimage{
+     background-image:url("https://images.meesho.com/images/products/21027653/e64b8_512.jpg");
+     background-repeat: no-repeat;
+     width:330px;
+    height:280px;
+    padding:150px 0px;
+    color:white;
+    text-align:center;
+    margin-left:50px;
+}
+.icon2{
+    flex: 1;
+    justify-content:center;
+    margin-top:170px;
+    font-size:250%;
+    align-items:center;
+}
+.icon3{
+    flex: 1;
+    justify-content:center;
+    margin:170px 20px;
+    font-size:250%;
+  }
+  
+.smallpic{
+    flex:9;
+    margin-top:20px;
+}
+.space{
+    text-align:center;
+    color:black;
+}
+.space1{
+    margin-left: 30px;
+}
+
+a:link{
+    text-decoration:none;
+}
+a:visited{
+    color:gray;
+    text-decoration: none;
+}
+a:hover{
+    color:black;
+    text-decoration:underline;
+}
+.dress1,.dress2,.dress3{
+    flex:1;
+    justify-content:space-between;
+    text-align:center;
+    margin:30px;
+    
+}
+h4{
+    color:orange;
+    font-size:120%;
+}
+.background2{
+    display:flex;
+    margin-left:160px;
+    }
+.dates{
+ background-color:white;
+ height: 60px;
+ width: 25px;
+ padding:25px;
+ border:1px solid white;
+ margin:20px;
+ color:orange;
+ font-size: 200%;
+}
+.center{
+    text-align:center;
+}
+.black{
+    color:gray;
+    font-size: 50%;
+}
+.bimages{
+    width: 330px;
+   height:300px;
+   padding:150px 0px;
+   color:white;
+   text-align:center;
+}
+.backgroundimage1{
+    background-image:url("https://images.meesho.com/images/products/20234193/5433d_512.jpg");
+    background-repeat: no-repeat;
+}
+.display{
+    display:flex;
+}
+.slide, .slide1, .slide2{
+    background-color:black;
+    width:25px;
+    padding:2px;
+    border-radius:4px;
+    border:1px solid black;
+}
+.slide{
+    margin:0px 0px 60px 1000px;
+}
+.slide1{
+    margin:0px 10px 0px;
+    height:2px;
+    width:2px;
+    border-radius:50%;
+}
+.slide2{
+    margin:0px 0px 60px 700px;
+}
+
+.backgroundimage2{
+    background-image:url("https://images.meesho.com/images/products/2540484/1_512.jpg");
+    background-repeat: no-repeat;
+    width:330px;
+    height:300px;
+   padding:150px 0px;
+   color:white;
+   text-align:center;
+}
+.trending{
+    text-align:center;
+}
+.jumpsuits{
+    display:flex;
+    justify-content:space-between;
+    margin:0 70px 70px;
+}
+.backgroundimage3{
+    background-image:url("https://images.meesho.com/images/products/20714518/5db7c_512.jpg");
+    background-repeat: no-repeat;
+    width:340px;
+    height:220px;
+}
+.bridal{
+    border:1px solid white;
+    background-color:white;
+    padding:12px;
+    text-align:center;
+    margin:80px;
+}
+.backgroundimage4{
+    background-image:url("https://images.meesho.com/images/products/5565058/1_512.jpg");
+    background-repeat: no-repeat;
+    width:340px;
+    height:220px;
+}
+.backgroundimage5{
+    background-image:url("https://images.meesho.com/images/products/20387247/40c7f_512.jpg");
+    background-repeat: no-repeat;
+    width:340px;
+    height:220px;
+}
+.backgroundimage6{
+    background-image:url("https://images.meesho.com/images/products/10279404/3fb40_512.jpg");
+    background-repeat: no-repeat;
+    width:340px;
+    height:220px;
+}
+.backgroundimage7{
+    background-image:url("https://images.meesho.com/images/products/20633576/96719_512.jpg");
+    background-repeat: no-repeat;
+    width:340px;
+    height:220px;
+}
+.backgroundimage8{
+    background-image:url("https://images.meesho.com/images/products/18484568/442b4_512.jpg");
+    background-repeat: no-repeat;
+    width:340px;
+    height:220px;
+}
+.backgroundimage9{
+    background-image:url("https://images.meesho.com/images/products/10823836/e82c1_512.jpg");
+    background-repeat: no-repeat;
+    width:340px;
+    height:220px;
+}
+.backgroundimage10{
+    background-image:url("https://images.meesho.com/images/products/11031667/e4ca4_512.jpg");
+    background-repeat: no-repeat;
+    width:340px;
+    height:220px;
+}
+.pictures{
+    display:flex;
+    margin:0px 70px 70px;
+    justify-content:space-around;
+    font-size:120%;
+    
+}
+.footerh{
+    background-color:rgb(51, 49, 49);
+    padding:40px;
+    display:flex;
+    margin:70px 70px 0px;
+    justify-content:space-around;
+    font-size:180%;
+    color:rgb(105, 102, 102)
+}
+.alfra{
+    background-color:black;
+    color:white;
+    margin:0px 70px;
+    padding:100px;
+}
+.flex3{
+    flex:2;
+}
+.flex4{
+    flex:1;
+}
+.color{
+    color:gray;
+}
+.email{
+    width: 200px;
+    height:50px;
+    background-color:rgb(37, 34, 34);
+    color:white;
+}
+.iconss{
+    border:1px solid gray;
+    background-color:gray;
+    color:white;
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:5px;
+}
+.marg{
+    margin-left:20px;
+}
+.iconss{
+    transition:all 1s ease-in-out; 
+}
+.iconss:hover{
+    transform:rotate(360deg);
+}
+

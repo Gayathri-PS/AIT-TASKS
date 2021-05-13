@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create_account</title>
+<style>
+    .border{
+        border:1px solid blue;
+        background-color:blue;
+        color:white;
+        width:98%;
+        padding:15px;
+        text-align:center;
+
+    }
+    .text{
+        text-align:center;
+    }
+    .display{
+        display:flex;
+    }
+    .flex{
+        flex:1;
+    }
+    input{
+        width: 750px;
+	    height: 30px;
+	    border: 1px solid gray; 
+        border-radius:2px;
+    }
+    button{
+        border:1px solid rgb(97, 97, 245);
+        background-color:rgb(75, 75, 240);
+        color:white;
+        width:600px;
+        padding:12px;
+        margin:20px;
+    }
+
+</style>
+</head>
+<body>
+     <form name="myform" method="post" action="fackbook_2.html" novalidate >
+         <div class="text">
+            <div class='border'>join facebook</div>
+            <h2>what's your name</h2>
+            <p>Enter the name you see in real life.</p>
+        </div>
+        <div class="display">
+            <div class='flex'>
+                <label>First name</label><br>
+                <input type="text" id="firstName"><div><span id="userErr"></span></div>  
+            </div>
+            <div class='flex'>
+                <label>second name</label><br>
+                <input type="text" id="secondname"><div><span id="userErr1"></span></div>     
+            </div>
+        </div>
+        <div class="text">
+            <button type="button" onclick="validateTheForm(event)">Submit</button>
+        </div>
+</form>
+<script>
+    function validateTheForm(e) {
+    e.preventDefault();
+    let userName =  document.getElementById("firstName");
+    let secondName =  document.getElementById("secondname");
+
+
+
+    if(userName.value.length < 4 || userName.value.length > 12){
+    userName.style.border = "1px solid red";
+    let userErr = document.getElementById('userErr');
+    userErr.innerText = "not a proper user name";
+    userErr.style.color = "red";
+
+}else{
+    userName.style.border = "1px solid green";
+    document.getElementById('userErr').style.display="none";
+}
+
+
+
+
+
+ if(secondName.value.length < 4 || secondName.value.length > 12){
+    secondName.style.border = "1px solid red";
+    let userErr1 = document.getElementById('userErr1');
+    userErr1.innerText = "not a proper user name";
+    userErr1.style.color = "red";
+
+}else{
+    secondName.style.border = "1px solid green";
+    document.getElementById('userErr1').style.display="none";
+}
+
+    }
+</script>
+</body>
+</html>

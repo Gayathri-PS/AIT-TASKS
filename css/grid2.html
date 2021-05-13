@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid-html</title>
+    <style>
+        img {
+            padding-left: 700px;
+        }
+
+        .heading {
+            text-align: center;
+        }
+
+        .text {
+            text-align: center;
+        }
+
+        .sticky {
+            position: sticky;
+            border: 1px solid green;
+            background-color: green;
+            color: white;
+            padding: 20px;
+            margin: 5px;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            margin: 30px;
+        }
+
+        .parent {
+            margin-left: 30px;
+        }
+
+        .relative {
+            position: relative;
+            border: 1px solid red;
+            background-color: red;
+            color: white;
+            padding: 20px;
+            width: 300px;
+        }
+
+        .grid {
+            display: grid;
+            grid: auto / repeat(3, auto);
+            grid-gap: 300px;
+        }
+
+        .part1 {
+            left: 9%;
+        }
+
+        .part2 {
+            left: 0%;
+
+        }
+
+        .part3 {
+            right: 44%;
+        }
+
+        .grid1 {
+            display: grid;
+            grid: auto / repeat(2, auto);
+            grid-gap: 300px;
+        }
+
+        .part4 {
+            border: 2px solid black;
+            left: 300px;
+        }
+
+        .part5 {
+            border: 2px solid black;
+            left: 13.7%;
+        }
+
+        .grid2 {
+            display: grid;
+            grid: auto / repeat(1, auto);
+            grid-gap: 300px;
+        }
+
+        .part6 {
+            left: 42.8%;
+        }
+
+        .static {
+            position: static;
+            border: 1px solid skyblue;
+            background-color: skyblue;
+            padding: 20px;
+            margin: 5px 30px;
+            color: white;
+
+        }
+
+        .abs {
+            position: relative;
+            border: 1px solid red;
+            /* background-color: yellow; */
+            /* color: white; */
+            padding: 20px;
+            /* width: 300px; */
+
+        }
+
+        .parta1 {
+            left: 42.8%;
+            margin-top: 30px;
+        }
+
+        .part2a {
+            border: 2px solid black;
+            left: 300px;
+        }
+
+        .part2b {
+            border: 2px solid black;
+            left: 13.7%;
+        }
+
+        .part3a {
+            left: 9%;
+        }
+
+        .part3b {
+            left:
+
+        }
+
+        .part3c {
+            right: 44%;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8SoYDh_ln-4ThD0XE69iT5K6IGO0-voN0iA&usqp=CAU"
+        alt="achiverit" width="100px" height="100px">
+    <h2 class="heading">POSITIONS</h2>
+    <div class="sticky text">sticky top element</div>
+    <div class="grid text">
+        <div class="relative part1">relative elements</div>
+        <div class="relative part2">relative elements</div>
+        <div class="relative part3">relative elements</div>
+    </div>
+    <div class="grid1 text">
+        <div class="relative part4">relative elements</div>
+        <div class="relative part5">relative elements</div>
+    </div>
+    <div class="grid2 text">
+        <div class="relative part6">relative elements</div>
+    </div>
+    <div class="static text">static</div>
+    <div class="static text">static</div>
+    <div class="static text">static</div>
+    <div class="static text">static</div>
+    <div class="static text">static</div>
+    <div class="static text">static</div>
+    <div class="static text">static</div>
+    <div class="abs ">
+      <div class="grid1">
+            <div class="abs-child part1a">ABSOLUTE</div>
+      </div>
+        <div class="grid1 text ">
+            <div class=" abs part2a">ABSOLUTE</div>
+            <div class=" abs part2b">ABSOLUTE</div>
+        </div>
+        <div class="grid text">
+            <div class="abs part3a">ABSOLUTE</div>
+            <div class="abs part3b">ABSOLUTE</div>
+            <div class="abs part3c">ABSOLUTE</div>
+        </div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrays_basics_js</title>
+</head>
+<body>
+    <script>
+        var cars=['volva','saab','bmu'];
+        console.log(cars);
+        var car= new Array('saab','valvo','bmw');
+        console.log(car[2]);
+        car[0]='opel';
+        document.write(car[0]);
+        document.write('<br>');
+var fruits=['banana','orange','apple','mango'];
+document.write(fruits.length);
+fruits.push('lemon');
+document.write(fruits);
+document.write('<br>');
+document.write(fruits.length);
+document.write('<br>');
+document.write(fruits.pop());
+document.write('<br>');
+
+document.write(fruits.shift());
+document.write('<br>');
+var bikes=['hero','sujuki','tvs'];
+bikes.unshift('honda');
+document.write(bikes);
+document.write('<br>');
+bikes.splice(2,1, 'zixer','gayi');
+document.write(bikes);
+    </script>
+</body>
+</html>

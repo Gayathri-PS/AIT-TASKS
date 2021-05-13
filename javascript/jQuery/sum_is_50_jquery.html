@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sum is 50</title>
+</head>
+<body>
+    <script src="jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#btn').click(function(){
+            let x=prompt('enter x value');
+            let y=prompt('enter y value');
+            if((x==50)||(y==500)||(x+y==50)){
+            $('#result').text('true');
+            }else{
+            $('#result').text('false');
+            } 
+            })
+            })
+
+    </script>
+    <p id="result"></p>
+    <button type="button" id="btn">click here</button>
+</body>
+</html>

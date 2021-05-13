@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sroll2</title>
+<style>
+    .slideUp {
+  animation-name: slideUp;
+  -webkit-animation-name: slideUp;
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  visibility: visible;
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+      } 
+  100% {
+    opacity: 1;
+  }
+}
+
+body {height:1500px;}
+.col-1 {
+    float:left
+    }
+.col-2 {
+    float:left;
+    padding-left:25px;
+    }
+img {
+    width:180px;
+    height:100px;
+    visibility:hidden;
+    }
+hr {
+    margin-top:400px;
+    }
+    
+</style>
+</head>
+<body>
+
+
+<hr>
+<div class="col-1">
+  <img id="myImg" src="https://s0.2mdn.net/4714706/Popcorn_v1__728x90.Banner.jpg" width="304" height="228">
+</div> 
+
+<div class="col-2">
+  Just some text..
+</div>
+
+<script>
+    window.onscroll = function myFunction() {
+  if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+    document.getElementById("myImg").className = "slideUp";
+  }
+}
+</script>
+</body>
+</html>

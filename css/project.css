@@ -1,0 +1,115 @@
+
+*{
+	font-family:sans-serif;
+}.header{
+    display:flex;
+    color:yellow;
+    align-items:center;
+}
+.headerleft{
+    flex: 5;
+}
+.headeright{
+    flex: 1;
+    color:black;
+}
+.icons{
+    padding:0px 10px;
+    color:black; 
+}
+.border{
+    display:flex;
+		background-color:black;
+		height:	40px;
+		align-items:center;
+		font-family:sans-serif;
+    padding:50 100px;
+    color:white;
+}
+select.allproducts{
+  padding: 11px;
+  background-color:black;
+  color:white;
+}
+ .firstlink>a:link {
+    color:white;
+    background-color: transparent;
+    text-decoration: none;
+    padding:12px 50px;
+  }
+  .firstlink>a:visited {
+    color:white;
+    background-color: yellow;
+    text-decoration:none;
+    
+  }
+  .firstlink>a:hover {
+    color:white;
+    background-color: yellow;
+    text-decoration: underline;
+  
+  }
+  .firstlink>a:active {
+    color: yellow;
+    background-color: ;
+    text-decoration: underline;
+  }
+  .background {
+    background-color:#ffffcc;
+    display:flex;
+    padding-top:10px;
+  }
+  .flex1 {
+      flex: 2;
+      padding: 100px;
+  }
+  .button1{
+    background-color:peru;
+    border:1px solid peru;
+    padding:20px 35px;
+    color:#fff;
+  }
+  .flex2{
+      flex:3;
+      padding:70px 10px 0px;
+  }
+  .img1{
+      background-color: none;
+      margin:40px;
+  }
+  .text{
+      text-align:center;
+  }
+
+  .jalabiya{
+      display:grid;
+      grid: auto/repeat(4, auto);
+      justify-content: center;
+      padding: 30px;
+      width:100%;
+      
+ }
+ h4{
+   color:orangered;
+ }
+.item1 {
+    grid-row: 1/ span 3;
+  }
+
+.background2{
+        display:flex;
+        justify-content: space-between;
+        }
+ .dates{
+     background-color:white;
+     height: 40px;
+     width: 25px;
+     padding:25px;
+     border:1px solid white;
+     margin:20px;
+     color:orangered;
+ }
+ .
+
+
+

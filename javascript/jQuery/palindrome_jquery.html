@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>palindrome</title>
+</head>
+<body>
+    <script src="jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#btn').click(function(){
+                var num=prompt('give any number');
+                var originalNum=num;
+                var reverse=0;
+                while(num!=0){
+                reverse=(reverse*10)+(num%10);
+                num=parseInt(num/10);
+             }
+                if(originalNum==reverse){
+                 $('#number').text(reverse+'is palindrome number');
+                }else{
+                $('#number').text(reverse+'is not a palindrome number')
+                }
+                });
+                });
+        
+    </script>
+    <button type='button' id="btn">click here</button>
+    <p id="number"></p>
+</body>
+</html>

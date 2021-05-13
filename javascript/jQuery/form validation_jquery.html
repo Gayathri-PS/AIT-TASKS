@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form validation</title>
+<style>
+body{
+	font-family: sans-serif;
+}
+.container{
+    margin: 100px 220px;
+	width: 1000px;
+	background: #fff;
+	padding: 45px;
+	box-sizing: border-box;
+	border :1px solid rgba(0,0,0,.1);
+	box-shadow: 0 5px 10px rgba(40, 41, 41, 0.89);
+}
+h1{
+	text-align: center;
+	margin: 0 0 40px;
+	padding: 0;
+	color: rgb(66,133,244);
+	letter-spacing: 2px;
+}
+input{
+	padding:5px 30px;
+	margin-bottom: 30px;
+	width: 55%;
+	box-sizing: border-box;
+	border: 2px solid #999;
+}
+input[type="submit"]{
+	border-radius: 10px;
+	height: 40px;
+	background: rgb(66,133,244);
+	color: #fff;
+    margin-left:200px;
+}
+input[type="submit"]:hover{
+	background: #34F458;
+	color: #fff;
+}
+
+</style>
+</head>
+<body>
+    <div class="container">
+		<h1>REGISTER</h1>
+		<form id="registration_form" novalidate>
+			<div>
+                <label>First Name : </label>	
+				<input type="text" id="form_fname" name="" required="">
+				<span class="error_form" id="fname_error_message"></span>
+					
+			</div>
+			<div>
+                <label>Second Name : </label>
+				<input type="text" id="form_sname" name="" required="">
+				<span class="error_form" id="sname_error_message"></span>
+				
+			</div>
+			<div>
+                <label>Email id : </label>	
+				<input type="email" id="form_email" name="" required="">
+				<span class="error_form" id="email_error_message"></span>
+			</div>
+			<div>
+                <label>password : </label>	
+				<input type="password" id="form_password" name="" required="">
+				<span class="error_form" id="password_error_message"></span>		
+			</div>
+            <div>
+                <label>Re-Enter Password</label>
+			    <input type="password" id="form_retype_password" name="" required="">
+				<span class="error_form" id="retype_password_error_message"></span>
+            </div>
+            <div>
+               <input type='radio' name='gender' id='male' value='male'>male
+               <input type='radio' name='gender' id='fe-male' value='fe-male'>fe-male<br>
+               <span class="error_form" id="gender_error_message"></span>
+            </div>
+			<input type="submit" value="Register" name="">
+		</form>
+
+<script src="jquery-3.6.0.js"></script> 
+<script>
+   $(function() {
+
+         $("#fname_error_message").hide();
+         $("#sname_error_message").hide();
+         $("#email_error_message").hide();
+         $("#password_error_message").hide();
+         $("#retype_password_error_message").hide();
+         $('#radio_error_message').hide();
+
+        var error_fname = false;
+        var error_sname = false;
+        var error_password = false;
+        var error_retype_password=false;
+        var error_email = false;
+        var error_gender = false;
+       
+
+         $("#form_fname").focusout(function(){
+            var pattern = /^[a-zA-Z]*$/;
+            var fname = $("#form_fname").val();
+            if (pattern.test(fname) && fname !== '') {
+               $("#fname_error_message").hide();
+               $("#form_fname").css("border","2px solid blue");
+               error_fname = false;
+            } else {
+               $("#fname_error_message").html("Should contain only Characters");
+               $("#fname_error_message").show();
+               $("#form_fname").css("border","2px solid red");
+                error_fname = true;
+            }
+         });
+
+         $("#form_sname").focusout(function() {
+            var pattern = /^[a-zA-Z]*$/;
+            var sname = $("#form_sname").val()
+            if (pattern.test(sname) && sname !== '') {
+               $("#sname_error_message").hide();
+               $("#form_sname").css("border","2px solid blue");
+               error_sname = false;
+            } else {
+               $("#sname_error_message").html("Should contain only Characters");
+               $("#sname_error_message").show();
+               $("#form_sname").css("border","2px solid red");
+                error_sname = true;
+            }
+         });
+
+          $("#form_password").focusout(function() {
+            var password_length = $("#form_password").val().length;
+            if (password_length < 8) {
+               $("#password_error_message").html("Atleast 8 Characters");
+               $("#password_error_message").show();
+               $("#form_password").css("border","2px solid red");
+                error_password = true;
+            } else {
+               $("#password_error_message").hide();
+               $("#form_password").css("border","2px solid blue");
+               error_password = false;
+            }
+         });
+
+         $("#form_retype_password").focusout(function() {
+            var password = $("#form_password").val();
+            var retype_password = $("#form_retype_password").val();
+            if (password !== retype_password) {
+                console.log(password,retype_password);
+               $("#retype_password_error_message").html("Passwords Did not Matched");
+               $("#retype_password_error_message").show();
+               $("#form_retype_password").css("border","2px solid red");
+              error_retype_password = true;
+            } else {
+               $("#retype_password_error_message").hide();
+               $("#form_retype_password").css("border","2px solid blue");
+               error_retype_password=false;
+            }
+         });
+
+         $("#form_email").focusout(function() {
+            var pattern = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+            var email = $("#form_email").val();
+            if (pattern.test(email) && email !== '') {
+               $("#email_error_message").hide();
+               $("#form_email").css("border","2px solid blue");
+            } else {
+               $("#email_error_message").html("Invalid Email");
+               $("#email_error_message").show();
+               $("#form_email").css("border","2px solid red");
+                error_email = true;
+            }
+         });
+         $('#fe-male, #male').focusout(function(){
+            if(document.getElementById('male').checked){
+                $("#gender_error_message").hide();
+                error_gender = false;
+            }
+            else if(document.getElementById('fe-male').checked){
+                $("#gender_error_message").hide();
+                 error_gender = false;
+            }else{
+               $('#gender_error_message').html('you have no selected any gender');
+               $("#gender_error_message").show();
+               error_gender = true;
+            }
+         })
+
+         $("#registration_form").submit(function() {
+         
+
+          
+
+            if (error_fname === false && error_sname === false && error_email === false && error_password === false && error_retype_password === false && error_gender ===false) {
+               alert("Registration Successfull");
+               return true;
+            } else {
+               alert("Please Fill the form Correctly");
+               return false;
+            }
+
+
+         });
+      });
+</script>
+   
+</body>
+</html>
